@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WarningDialog</class>
+ <widget class="QDialog" name="WarningDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>384</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Vượt giới hạn thêm truy vấn</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="warning"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Số lượng văn bản được thêm truy vấn trong một lần đã vượt quá 100
+Chương trình sẽ dừng thêm văn bản truy vấn
+Bạn vẫn có thể tiếp tục thêm văn bản truy vấn nếu cần</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Đã hiểu</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>WarningDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>325</x>
+     <y>-8</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
